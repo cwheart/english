@@ -17,7 +17,7 @@ module.exports = function(route){
   route.get('/words', function(req, res){
     model.Word.find({}, function (err, docs) {
       res.writeHead(200);
-      res.end("hello world\n");
+      res.end(docs);
     });
   });
 }
